@@ -22,7 +22,7 @@ import {
 // ** Styles
 import "@styles/react/apps/app-ecommerce.scss";
 
-const Shop = () => {
+const Shop = (props) => {
   // ** States
   const [activeView, setActiveView] = useState("grid");
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -33,6 +33,7 @@ const Shop = () => {
 
   // ** Get products
   useEffect(() => {
+    console.log("HAS CHANGEED");
     dispatch(
       getProducts({
         q: "",
@@ -45,11 +46,12 @@ const Shop = () => {
 
   return (
     <Fragment>
-      <Breadcrumbs
+      {/* <Breadcrumbs
         breadCrumbTitle="Shop"
         breadCrumbParent="eCommerce"
         breadCrumbActive="Shop"
-      />
+      /> */}
+
       <Products
         store={store}
         dispatch={dispatch}
@@ -64,7 +66,7 @@ const Shop = () => {
         deleteCartItem={deleteCartItem}
         deleteWishlistItem={deleteWishlistItem}
       />
-      <Sidebar sidebarOpen={sidebarOpen} />
+      {/* <Sidebar sidebarOpen={sidebarOpen} /> */}
     </Fragment>
   );
 };

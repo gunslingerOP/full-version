@@ -1,2 +1,14 @@
-@import '../node_modules/prismjs/themes/prism-tomorrow';
-@import './assets/scss/app.scss';
+@import "../node_modules/prismjs/themes/prism-tomorrow";
+@import "./assets/scss/app.scss";
+
+.invoice-sales-total-wrapper {
+  justify-content: flex-end;
+}
+
+.react-select {
+  z-index: 99;
+}
+
+.toolbar-bottom {
+  z-index: 0;
+}
